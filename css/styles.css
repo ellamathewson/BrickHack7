@@ -168,7 +168,7 @@ strong {
 	padding: 1.375rem 2.125rem 1.375rem 2.125rem;
 	border-radius: 0.25rem;
 	background-color: #fbd46d;
-	color: #fff;
+	color: black;
 	font: 700 0.75rem/0 "Montserrat", sans-serif;
 	text-decoration: none;
 	transition: all 0.2s;
@@ -176,7 +176,7 @@ strong {
 
 .btn-solid-lg:hover {
 	background-color: white;
-	color: #fbd46d;
+	color: black;
 	text-decoration: none;
 }
 
