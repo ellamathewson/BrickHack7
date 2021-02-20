@@ -89,7 +89,8 @@ h2 {
 }
 
 h3 {
-	color: #484a46;
+	color: white;
+	margin-bottom: 8vh;
 	font: 700 1.375rem/1.75rem "Montserrat", sans-serif;
 }
 
@@ -2452,3 +2453,18 @@ a:hover.back-to-top {
 	/* end of navigation */
 }
 /* end of min-width width 1200px */
+
+
+/* APP PAGE */
+.grammar-form-submit {
+	background-color: #fbd46d;
+	color: white;
+	border: none;
+	padding: .75em 1.5em .75 1.5em;
+}
+
+.grammar-form-submit:hover {
+	background-color: white;
+	color: #fbd46d;
+
+}
