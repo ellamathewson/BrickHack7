@@ -1897,7 +1897,7 @@ a:hover.back-to-top {
 	}
 
 	.navbar-custom.top-nav-collapse .nav-item .nav-link {
-		color: black;
+		color: grey;
 	}
 	
 	.navbar-custom.top-nav-collapse .nav-item .nav-link:hover,
