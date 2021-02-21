@@ -68,7 +68,7 @@ const check = () => {
                         }
                         let word = singleWordArr.join('');
                         let sentence = `<p style="color: black; font-weight: bold;">Error found: ${input}</p>`
-                        let newText = sentence.replace(`${word}`, `<span style="color: red;">${word}</span>`);
+                        let newText = sentence.replace(`${word}`, `<span style="color: #fbd46d;">${word}</span>`);
                         document.querySelector('#errorSentence').insertAdjacentHTML('beforeend', newText);
 
                     })
