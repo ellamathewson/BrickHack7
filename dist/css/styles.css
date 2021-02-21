@@ -2450,14 +2450,14 @@ a:hover.back-to-top {
 
 
 /* APP PAGE */
-.grammar-form-submit {
+.grammar-form-submit, .grammar-form-next {
 	background-color: #fbd46d;
 	color: white;
 	border: none;
 	padding: .75em 1.5em .75 1.5em;
 }
 
-.grammar-form-submit:hover {
+.grammar-form-submit:hover, .grammar-form-next:hover {
 	background-color: white;
 	color: #fbd46d;
 
