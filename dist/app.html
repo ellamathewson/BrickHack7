@@ -6,8 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
-    <!--Vue-->
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
 
     <!-- SEO Meta Tags -->
     <meta name="description"
@@ -123,7 +121,7 @@
                                     <textarea class="form-control" id="promptAnswer" rows="3" v-model="sentenceInput"></textarea>
                                 </div>
                                 <button type="reset" class="btn btn-primary grammar-form-next" onClick="generatePrompt()">Next</button>
-                                <button type="submit" @click="check" class="btn btn-primary grammar-form-submit" data-toggle="tooltip" data-placement="top" title="Correct!">Submit</button>  <div class="alert alert-success" id="correct" role="alert" style="display: none">
+                                <button type="submit" onclick="check()" class="btn btn-primary grammar-form-submit" data-toggle="tooltip" data-placement="top" title="Correct!">Submit</button>  <div class="alert alert-success" id="correct" role="alert" style="display: none">
                                         Correct!
                                   </div>
                         </div>
