@@ -2453,6 +2453,11 @@ a:hover.back-to-top {
 /* end of min-width width 1200px */
 
 
+#toastContainment {
+	top: 6em;
+	right: 10px;
+}
+
 /* APP PAGE */
 .grammar-form-submit, .grammar-form-next {
 	background-color: #fbd46d;

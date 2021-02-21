@@ -12,6 +12,7 @@ let app = new Vue({
 
             let newInput = this.sentenceInput.replaceAll(" ", "%20");
             let data = `text=${newInput}`
+            const input = this.sentenceInput;
 
             const xhr = new XMLHttpRequest();
             xhr.withCredentials = true;
@@ -23,13 +24,35 @@ let app = new Vue({
 
                     //console.log(res);
                     res.matches.forEach(el => {
-                        console.log(el.message);
-                    }); //Getting the message
+                        const toastDiv = document.createElement('div');
+                        const header = document.createElement('div');
+                        const body = document.createElement('div');
+                        const span = document.createElement('span');
+                        const close = document.createElement('button');
+                        const errorMsg = document.createElement('p');
 
-                    res.matches.forEach(el => {
-                        console.log(el.offset);
-                    }); //Getting the offset
+                        toastDiv.className = "toast";
+                        toastDiv.setAttribute('data-autohide', 'false');
+
+                        header.className = "toast-header";
+                        body.className = "toast-body";
+                        close.className = "ml-2 mb-1 close";
+                        close.setAttribute('data-dismiss', 'toast');
+                        close.type = "button";
+                        span.setAttribute("aria-hidden", "true");
+                        span.innerHTML = "&times;";
+                        errorMsg.innerHTML =  el.message;
+
+                        close.appendChild(span);
+                        header.appendChild(close);
+                        body.appendChild(errorMsg);
+                        toastDiv.appendChild(header);
+                        toastDiv.appendChild(body);
+
+                        document.querySelector('#toastContainment').appendChild(toastDiv);
+                    }); //Getting the message
                     
+                    $('.toast').toast('show');
                 }
             });
 
