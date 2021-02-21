@@ -806,6 +806,10 @@ input[type='checkbox'] {
 	margin-bottom: 1.25rem;
 }
 
+#errorSentence{
+	padding-top: 1.1em;
+}
+
 
 /*********************/
 /*     05. Intro     */
@@ -2465,14 +2469,14 @@ a:hover.back-to-top {
 }
 
 /* APP PAGE */
-.grammar-form-submit, .grammar-form-next {
+.grammar-form-submit, .grammar-form-next, .grammar-form-clear {
 	background-color: #fbd46d;
 	color: white;
 	border: none;
 	padding: .75em 1.5em .75 1.5em;
 }
 
-.grammar-form-submit:hover, .grammar-form-next:hover {
+.grammar-form-submit:hover, .grammar-form-next:hover, .grammar-form-clear:hover {
 	background-color: white;
 	color: #fbd46d;
 

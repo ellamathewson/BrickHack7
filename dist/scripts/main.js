@@ -49,11 +49,29 @@ const check = () => {
                     document.querySelector('#toastContainment').appendChild(toastDiv);
                 }); //Getting the message
 
+
+                console.log(res);
                 if (res.matches.length === 0) {
                     document.querySelector('#promptAnswer').value = "";
                     document.querySelector('#correct').style.display = "block";
+                    document.querySelector('#correct').style.marginTop = "1.3em";
                     $("#correct").delay(1000).fadeOut();
+                    document.querySelector('#promptAnswer').value = "";
                     generatePrompt();
+                } else {
+                    res.matches.forEach(message => {
+                        let singleWordArr = [];
+                        let wordTotal = message.offset + message.length;
+                        for (let i = message.offset; i < wordTotal; i++) {
+                            let messageArr = input.split('');
+                            singleWordArr.push(messageArr[i]);
+                        }
+                        let word = singleWordArr.join('');
+                        let sentence = `<p style="color: black; font-weight: bold;">Error found: ${input}</p>`
+                        let newText = sentence.replace(`${word}`, `<span style="color: red;">${word}</span>`);
+                        document.querySelector('#errorSentence').insertAdjacentHTML('beforeend', newText);
+
+                    })
                 }
 
                 $('.toast').toast('show');
@@ -69,4 +87,9 @@ const check = () => {
         xhr.send(data);
 
     }
+}
+
+const clearText = () => {
+    document.querySelector('#promptAnswer').value = "";
+    document.querySelector('#errorSentence').innerHTML = "";
 }

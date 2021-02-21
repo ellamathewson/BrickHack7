@@ -13,6 +13,7 @@ const parseJSON = (file, callback) => {
 
 //usage:
 const generatePrompt = () => {
+    document.querySelector('#promptAnswer').value = "";
     parseJSON("prompts.json", (text) => {
         const prompts = JSON.parse(text);
         const randomPromptType = Math.floor(Math.random()* (3 - 0) + 0);
