@@ -85,7 +85,7 @@ h1 {
 }
 
 h2 {
-	color: #484a46;
+	color: black;
 	font: 700 1.75rem/2.125rem "Sanchez", serif;
 }
 
@@ -96,7 +96,7 @@ h3 {
 }
 
 h4 {
-	color: #484a46;
+	color: black;
 	font: 700 1.25rem/1.625rem "Sanchez", serif;
 }
 
@@ -138,7 +138,7 @@ a.white,
 }
 
 strong {
-	color: #484a46;
+	color: black;
 }
 
 .section-title {
