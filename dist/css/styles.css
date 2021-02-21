@@ -2383,6 +2383,12 @@ a:hover.back-to-top {
 	}
 	/* end of team */
 
+	#correct {
+		width: 100px;
+		margin: 10px 10px 10px 10px;
+		left: 45%;
+	}
+
 
 	/* About */
 	.counter {
@@ -2454,7 +2460,7 @@ a:hover.back-to-top {
 
 
 #toastContainment {
-	top: 6em;
+	top: 8em;
 	right: 10px;
 }
 

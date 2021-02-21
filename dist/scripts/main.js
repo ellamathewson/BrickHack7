@@ -51,6 +51,13 @@ let app = new Vue({
 
                         document.querySelector('#toastContainment').appendChild(toastDiv);
                     }); //Getting the message
+
+                    if(res.matches.length === 0) {
+                        document.querySelector('#promptAnswer').value = "";
+                        document.querySelector('#correct').style.display = "block";
+                        $("#correct").delay(1000).fadeOut();
+                        generatePrompt();
+                    }
                     
                     $('.toast').toast('show');
                 }
