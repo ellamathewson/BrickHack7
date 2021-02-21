@@ -101,12 +101,12 @@ h4 {
 }
 
 h5 {
-	color: #484a46;
+	color: black;
 	font: 700 1.125rem/1.5rem "Sanchez", serif;
 }
 
 h6 {
-	color: #484a46;
+	color: black;
 	font: 700 1rem/1.375rem "Sanchez", serif;
 }
 
@@ -390,6 +390,10 @@ input[type='checkbox'] {
 .form-control-submit-button:hover {
 	background-color: transparent;
 	color: #14bf98;
+}
+
+.left {
+	text-align: left;
 }
 
 /* Form Success And Error Message Formatting */
