@@ -17,8 +17,19 @@ let app = new Vue({
             xhr.withCredentials = true;
 
             xhr.addEventListener("readystatechange", function () {
-                if (this.readyState === this.DONE) {
-                    console.log(this.responseText);
+
+                if (this.readyState === 4 && this.status === 200) {
+                    let res = JSON.parse(this.responseText);
+
+                    //console.log(res);
+                    res.matches.forEach(el => {
+                        console.log(el.message);
+                    }); //Getting the message
+
+                    res.matches.forEach(el => {
+                        console.log(el.offset);
+                    }); //Getting the offset
+                    
                 }
             });
 
@@ -29,6 +40,6 @@ let app = new Vue({
 
             xhr.send(data);
 
-        }
+        },
     }
 });
