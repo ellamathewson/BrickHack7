@@ -61,9 +61,9 @@ const check = () => {
                 } else {
                     res.matches.forEach(message => {
                         let singleWordArr = [];
+                        let messageArr = input.split(''); //split input into character array
                         let wordTotal = message.offset + message.length;
                         for (let i = message.offset; i < wordTotal; i++) {
-                            let messageArr = input.split('');
                             singleWordArr.push(messageArr[i]);
                         }
                         let word = singleWordArr.join('');
